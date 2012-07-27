@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.LightWeb.Domain", "Skight.LightWeb.Domain\Skight.LightWeb.Domain.csproj", "{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.LightWeb.Domain.Specs", "Skight.LightWeb.Domain.Specs\Skight.LightWeb.Domain.Specs.csproj", "{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB7D1BB-A274-45FC-8F9B-46720F072F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EDB929-8AF9-475B-8BEE-A7DEA9D54D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
