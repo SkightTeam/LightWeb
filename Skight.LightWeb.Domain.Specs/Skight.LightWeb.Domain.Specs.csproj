@@ -38,6 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\3rdParty\MSpec\Machine.Specifications.dll</HintPath>
     </Reference>
+    <Reference Include="Machine.Specifications.AutoMocking">
+      <HintPath>..\3rdParty\AutoMock\Machine.Specifications.AutoMocking.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\3rdParty\nUnit\nunit.framework.dll</HintPath>
     </Reference>
@@ -53,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContainerSpecs.cs" />
+    <Compile Include="ResolverSpecs.cs" />
     <Compile Include="DependencyIntegrationSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

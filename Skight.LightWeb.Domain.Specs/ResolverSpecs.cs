@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using Machine.Specifications;
-using Machine.Specifications.AutoMocking.Moq;
-using Machine.Specifications.Model;
 
 namespace Skight.LightWeb.Domain.Specs
 {
-    public class ResolverSpecs
+    public class When_bind_a_class_to_a_intefercate
     {
         private Establish context =
             () =>
@@ -17,7 +14,7 @@ namespace Skight.LightWeb.Domain.Specs
                     subject = new ResolverImpl(dictioary);
                 };
 
-       private It Container_get_by_interface_should_return_its_implementation_class =
+       private It should_resolve_the_interface_to_the_class =
             () => subject.get<MockInterface>().ShouldBeOfType<MockImplementaion>();
 
         private static ResolverImpl subject;
