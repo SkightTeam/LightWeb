@@ -1,47 +1,77 @@
-﻿using Machine.Specifications;
+﻿using System;
+using System.Collections.Generic;
+using Machine.Specifications;
 
 namespace Skight.LightWeb.Domain.Specs
 {
     public class DependencyIntegrationSpecs
     {
-        private Because of =
-            () => service = Container.get<StubService>();
+        private Establish context =
+            () =>
+                {
+                    IDictionary<Type, object> item_resolvers = new Dictionary<Type, object>();
+                    registration = new RegistrationImpl(item_resolvers);
+                    Container.initialize_with(new ResolverImpl(item_resolvers));
+                    
+                };
 
-        private It should_inject_repository_into_service =
-            () => service.Repository.ShouldBeOfType<StubRepositoryImpl>();
+        protected static Registration registration;
+    }
+
+    public class when_registry_a_simple_class_RepositoryImpl_without_further_dependency:DependencyIntegrationSpecs
+    {
+        private Establish context =
+            () => registration.register<Repository, RepositoryImpl>();
+        private Because of =
+           () => result = Container.get<Repository>();
+
+        private It should_get_a_object_which_is_not_null =
+            () => result.ShouldNotBeNull();
+
+        private It should_get_RepositoryImpl_class =
+            () => result.ShouldBeOfType<RepositoryImpl>();
+
+        private static Repository result;
+    }
+
+    public class when_registry_a_class_ServiceImpl_which_depend_on_another_interface_Repository : DependencyIntegrationSpecs {
+        private Establish context =
+            () => {
+                registration.register<Repository, RepositoryImpl>();
+                //registration.register<Service,ServiceImpl>();
+            };
+        private Because of =
+           () => result = Container.get<Service>();
 
         private It inject_repository_should_not_be_null =
-            () => service.Repository.ShouldNotBeNull();
-             
-        private static StubService service;
+            () => result.ShouldNotBeNull();
+
+        private It should_inject_service =
+            () => result.ShouldBeOfType<ServiceImpl>();
+
+        private It should_inject_repository_into_service =
+            () => result.Repository.ShouldBeOfType<RepositoryImpl>();
+        
+
+        private static Service result;
     }
-
-    public interface StubService
+    public interface Repository { }
+    public class RepositoryImpl : Repository { }
+    public interface Service{Repository Repository { get; } }
+    public class ServiceImpl : Service
     {
-        StubRepository Repository { get; } 
-    }
+        private Repository repository;
 
-    public class StubServiceImpl : StubService
-    {
-        private StubRepository repository;
-
-        public StubServiceImpl(StubRepository repository)
+        public ServiceImpl(Repository repository)
         {
             this.repository = repository;
         }
 
-        public StubRepository Repository
+        public Repository Repository
         {
             get { return repository; }
         }
     }
-    public interface StubRepository
-    {
-        
-    }
-    public class StubRepositoryImpl:StubRepository
-    {
-        
-    }
+  
 
 }
