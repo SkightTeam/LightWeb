@@ -11,6 +11,7 @@ namespace Skight.LightWeb.Domain.Specs
                 {
                     resolver_dictionary = new Dictionary<Type, object>();
                     subject = new RegistrationImpl(resolver_dictionary);
+                    
             };
 
         private Because of =
