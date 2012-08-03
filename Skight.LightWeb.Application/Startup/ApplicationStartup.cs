@@ -10,9 +10,11 @@ namespace Skight.LightWeb.Application.Startup
         public void run()
         {
             IDictionary<Type, object> item_resolvers = new Dictionary<Type, object>();
-            var registration = new RegistrationImpl(item_resolvers);
             Container.initialize_with(new ResolverImpl(item_resolvers));
+            var registration = new RegistrationImpl(item_resolvers);
             registration.register<Repository,RepositoryImpl>();
+
+            var repository = Container.get<Repository>();
         }
 
         /// <summary>
