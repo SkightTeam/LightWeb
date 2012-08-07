@@ -9,7 +9,7 @@ namespace Skight.LightWeb.Domain.Specs
         private Establish context =
             () =>
                 {
-                    resolver_dictionary = new Dictionary<Type, object>();
+                    resolver_dictionary = new Dictionary<Type, DiscreteItemResolver>();
                     subject = new RegistrationImpl(resolver_dictionary);
                     
             };
@@ -18,10 +18,10 @@ namespace Skight.LightWeb.Domain.Specs
             () => subject.register<MockInterface, MockImplementation>();
 
         private It the_key_value_pair_should_be_added_to_resovler_dictionary =
-            () => resolver_dictionary[typeof (MockInterface)].ShouldBeOfType<MockImplementation>();
+            () => resolver_dictionary[typeof (MockInterface)].resolve().ShouldBeOfType<MockImplementation>();
         
         private static RegistrationImpl subject;
-        private static Dictionary<Type, object> resolver_dictionary;
+        private static Dictionary<Type, DiscreteItemResolver> resolver_dictionary;
 
         private interface MockInterface{}
         private class MockImplementation:MockInterface {}

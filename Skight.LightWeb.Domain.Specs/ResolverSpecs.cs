@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Machine.Specifications;
+using Rhino.Mocks;
 
 namespace Skight.LightWeb.Domain.Specs
 {
@@ -9,9 +10,11 @@ namespace Skight.LightWeb.Domain.Specs
         private Establish context =
             () =>
                 {
-                    var dictioary = new Dictionary<Type, object>();
-                    dictioary.Add(typeof (MockInterface), new MockImplementaion());
+                    var item_resolver = MockRepository.GenerateMock<DiscreteItemResolver>();
+                    var dictioary = new Dictionary<Type, DiscreteItemResolver>();
+                    dictioary.Add(typeof (MockInterface),  item_resolver);
                     subject = new ResolverImpl(dictioary);
+                    item_resolver.Stub(x => x.resolve()).Return(new MockImplementaion());
                 };
 
        private It should_resolve_the_interface_to_the_class =

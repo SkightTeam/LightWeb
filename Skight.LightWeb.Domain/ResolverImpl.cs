@@ -5,16 +5,16 @@ namespace Skight.LightWeb.Domain
 {
     public class ResolverImpl:Resolver
     {
-        private readonly IDictionary<Type, object> item_resolvers;
+        private readonly IDictionary<Type, DiscreteItemResolver> item_resolvers;
 
-        public ResolverImpl(IDictionary<Type, object> itemResolvers)
+        public ResolverImpl(IDictionary<Type, DiscreteItemResolver> itemResolvers)
         {
             item_resolvers = itemResolvers;
         }
 
         public Dependency get<Dependency>()
         {
-            return (Dependency) item_resolvers[typeof (Dependency)];
+            return (Dependency) item_resolvers[typeof (Dependency)].resolve();
         }
     }
 }

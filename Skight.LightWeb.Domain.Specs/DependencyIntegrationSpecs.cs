@@ -9,7 +9,7 @@ namespace Skight.LightWeb.Domain.Specs
         private Establish context =
             () =>
                 {
-                    IDictionary<Type, object> item_resolvers = new Dictionary<Type, object>();
+                    IDictionary<Type, DiscreteItemResolver> item_resolvers = new Dictionary<Type, DiscreteItemResolver>();
                     registration = new RegistrationImpl(item_resolvers);
                     Container.initialize_with(new ResolverImpl(item_resolvers));
                     
