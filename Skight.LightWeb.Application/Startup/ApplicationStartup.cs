@@ -14,7 +14,7 @@ namespace Skight.LightWeb.Application.Startup
             var registration = new RegistrationImpl(item_resolvers);
             registration.register<Repository,RepositoryImpl>();
 
-            var repository = Container.get<Repository>();
+            var repository = Container.get_a<Repository>();
         }
 
         /// <summary>

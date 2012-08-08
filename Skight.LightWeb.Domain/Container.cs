@@ -3,9 +3,9 @@
     public class Container
     {
         private static Resolver underlying_resolver;
-        public static T get<T>()
+        public static T get_a<T>()
         {
-            return underlying_resolver.get<T>();
+            return underlying_resolver.get_a<T>();
         }
 
         public static void initialize_with(Resolver resolver)

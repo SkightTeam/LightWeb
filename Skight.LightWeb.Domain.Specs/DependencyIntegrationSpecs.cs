@@ -23,7 +23,7 @@ namespace Skight.LightWeb.Domain.Specs
         private Establish context =
             () => registration.register<Repository, RepositoryImpl>();
         private Because of =
-           () => result = Container.get<Repository>();
+           () => result = Container.get_a<Repository>();
 
         private It should_get_a_object_which_is_not_null =
             () => result.ShouldNotBeNull();
@@ -41,7 +41,7 @@ namespace Skight.LightWeb.Domain.Specs
                 //registration.register<Service,ServiceImpl>();
             };
         private Because of =
-           () => result = Container.get<Service>();
+           () => result = Container.get_a<Service>();
 
         private It inject_repository_should_not_be_null =
             () => result.ShouldNotBeNull();

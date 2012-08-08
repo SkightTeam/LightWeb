@@ -18,7 +18,7 @@ namespace Skight.LightWeb.Domain.Specs
                 };
 
        private It should_resolve_the_interface_to_the_class =
-            () => subject.get<MockInterface>().ShouldBeOfType<MockImplementaion>();
+            () => subject.get_a<MockInterface>().ShouldBeOfType<MockImplementaion>();
 
         private static ResolverImpl subject;
         private interface MockInterface { }

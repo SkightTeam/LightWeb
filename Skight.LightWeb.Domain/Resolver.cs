@@ -2,6 +2,6 @@
 {
     public interface Resolver
     {
-        Dependency get<Dependency>();
+        Dependency get_a<Dependency>();
     }
 }
