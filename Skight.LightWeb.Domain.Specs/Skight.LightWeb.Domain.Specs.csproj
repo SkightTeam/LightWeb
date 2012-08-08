@@ -60,6 +60,7 @@
     <Compile Include="ResolverSpecs.cs" />
     <Compile Include="DependencyIntegrationSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeResolverSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.LightWeb.Domain\Skight.LightWeb.Domain.csproj">

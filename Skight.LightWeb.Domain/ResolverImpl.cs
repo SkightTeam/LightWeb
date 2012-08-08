@@ -16,5 +16,10 @@ namespace Skight.LightWeb.Domain
         {
             return (Dependency) item_resolvers[typeof (Dependency)].resolve();
         }
+
+        public object get_a(Type type)
+        {
+            return item_resolvers[type].resolve();
+        }
     }
 }

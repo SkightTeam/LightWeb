@@ -11,19 +11,10 @@ namespace Skight.LightWeb.Domain
             this.item_resolvers = item_resolvers;
         }
 
-        public void register<Contract, Implementation>() where Implementation : Contract, new()
+        public void register<Contract, Implementation>() where Implementation : Contract
         {
-            
-            item_resolvers.Add(typeof(Contract), new MockResolverImpl<Implementation>());
-        }
-
-        private class MockResolverImpl<Implementation>:DiscreteItemResolver
-            where Implementation :new()
-        {
-            public object resolve()
-            {
-                return new Implementation();
-            }
+           
+            item_resolvers.Add(typeof(Contract), new TypeResolver(typeof(Implementation)));
         }
     }
 

@@ -38,7 +38,7 @@ namespace Skight.LightWeb.Domain.Specs
         private Establish context =
             () => {
                 registration.register<Repository, RepositoryImpl>();
-                //registration.register<Service,ServiceImpl>();
+                registration.register<Service,ServiceImpl>();
             };
         private Because of =
            () => result = Container.get_a<Service>();
