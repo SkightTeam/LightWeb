@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Skight.LightWeb.Domain;
+using Skight.LightWeb.Presentation.Web.FrontController;
 
 
 namespace Skight.LightWeb.Application.Startup
@@ -13,8 +14,9 @@ namespace Skight.LightWeb.Application.Startup
             Container.initialize_with(new ResolverImpl(item_resolvers));
             var registration = new RegistrationImpl(item_resolvers);
             registration.register<Repository,RepositoryImpl>();
-
-            var repository = Container.get_a<Repository>();
+            registration.register<FrontController,FrontControllerImpl>();
+            registration.register<CommandResolver,CommandResolverImpl>();
+            
         }
 
         /// <summary>
