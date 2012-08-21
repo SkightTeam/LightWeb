@@ -43,6 +43,7 @@
     <Compile Include="Container.cs" />
     <Compile Include="DiscreteItemResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterInContainerAttribute.cs" />
     <Compile Include="Registration.cs" />
     <Compile Include="RegistrationImpl.cs" />
     <Compile Include="Resolver.cs" />

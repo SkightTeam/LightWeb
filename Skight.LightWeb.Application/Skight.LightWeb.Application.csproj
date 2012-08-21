@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup\ApplicationStartup.cs" />
+    <Compile Include="Startup\RegistrationScanner.cs" />
+    <Compile Include="Startup\StartupCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Skight.LightWeb.Domain\Skight.LightWeb.Domain.csproj">

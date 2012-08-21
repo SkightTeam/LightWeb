@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.LightWeb.Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.LightWeb.Presentation.Specs", "Skight.LightWeb.Presentation.Specs\Skight.LightWeb.Presentation.Specs.csproj", "{193CA6AA-08EA-422B-92AD-CBF502E5D9B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skight.LightWeb.Sample.Presentation", "Skight.LightWeb.Sample.Presentation\Skight.LightWeb.Sample.Presentation.csproj", "{D61E8784-7A25-4AF5-B2D1-A91D20170026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,16 @@ Global
 		{193CA6AA-08EA-422B-92AD-CBF502E5D9B9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{193CA6AA-08EA-422B-92AD-CBF502E5D9B9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{193CA6AA-08EA-422B-92AD-CBF502E5D9B9}.Release|x86.ActiveCfg = Release|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D61E8784-7A25-4AF5-B2D1-A91D20170026}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
