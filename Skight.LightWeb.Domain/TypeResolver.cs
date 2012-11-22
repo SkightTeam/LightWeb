@@ -19,7 +19,6 @@ namespace Skight.LightWeb.Domain
             ParameterInfo[] param_types = get_constructor_parameters();
             IEnumerable<object> parameters = get_parameters(param_types);
             return Activator.CreateInstance(type_to_create, parameters.ToArray());
-            return Activator.CreateInstance(type_to_create);
         }
 
         private IEnumerable<object> get_parameters(ParameterInfo[] param_types)
